@@ -65,11 +65,34 @@
     </div><br>
     <div>
         <mat-icon color="warn">
-            <span class="material-icons" [matBadge]="alert" matBadgeColor="accent"  matBadgeSize="small" matBadgeOverlap="false">shopping_cart</span>
-        </mat-icon></div>
+            <span class="material-icons" [matBadge]="alert" matBadgeColor="accent" matBadgeSize="small"
+                matBadgeOverlap="false">shopping_cart</span>
+        </mat-icon>
+    </div>
     <br>
     <div>
         <span [matBadge]="alert" [matBadgeHidden]="alert===0">Alert</span>
     </div><br>
 </span>
 <hr>
+<div class="mat-title" style="text-align: center;">ToolBar</div>
+<mat-toolbar color="primary" class="navbar">
+    <div>CodeEvolution</div>
+    <div >
+        <span class="navbaritems">Home</span>
+        <span class="navbaritems">About</span>
+        <span class="navbaritems">Services</span>
+    </div>
+</mat-toolbar>
+<hr>
+<div class="mat-title" style="text-align: center;">ToolBar</div>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav (opened)="log('opened')" (closed)="log('closed')" mode="side" [(opened)]="opened">SideNav</mat-sidenav>
+    <!-- mode=side,push,over -->
+    <mat-sidenav-content>Main
+        <button (click)="opened=!opened">Toogle Open</button>
+        <button (click)="sidenav.open()">Open</button>
+        <button (click)="sidenav.close()">Close</button>
+        <button (click)="sidenav.toggle()">Toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>

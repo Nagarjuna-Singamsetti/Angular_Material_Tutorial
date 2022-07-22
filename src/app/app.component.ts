@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular_Material';
   alert=0;
+  opened=false;
+  log(state: any){
+    console.log(state);
+  }
 }
