@@ -1,15 +1,18 @@
 <hr>
+<div class="mat-title" style="text-align: center;">Buttons</div>
 <button mat-flat-button>Basic</button>
     <button mat-flat-button color="primary">Primary</button>
     <button mat-flat-button color="accent">Accent</button>
     <button mat-flat-button color="warn">Warn</button>
     <button mat-flat-button disabled>Disabled</button>
+ 
 <hr>
+<div class="mat-title" style="text-align: center;">Toggle</div>
     <div>
         <mat-button-toggle #toggleBtn checked disableRipple>Toggle</mat-button-toggle>
         {{toggleBtn.checked}}
-    </div><br>
-    
+    </div>
+    <div class="mat-title" style="text-align: center;">ToggleGroup</div>
     <div>
         <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
             <mat-button-toggle value="angular">Angular</mat-button-toggle>
@@ -17,5 +20,11 @@
             <mat-button-toggle value="vue">Vue</mat-button-toggle>
         </mat-button-toggle-group>
         {{toggleGroup.value}}
+    </div>
+    <hr>
+    <div class="mat-title" style="text-align: center;">Icons</div>
+    <div>
+        <mat-icon color="primary">thumb_up</mat-icon>
+        <mat-icon color="warn">build</mat-icon>
     </div>
     <hr>
