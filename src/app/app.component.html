@@ -143,3 +143,48 @@
         <p matLine>Line 2</p>
     </mat-list-item>
 </mat-list>
+<hr>
+<div class="mat-title" style="text-align: center;">Grid List</div>
+<mat-grid-list cols="3" rowHeight="2:1" gutterSize="10px">
+    <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile>
+    <mat-grid-tile>Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
+</mat-grid-list>
+<hr>
+<div class="mat-title" style="text-align: center;">Expansion Panel</div>
+<mat-accordion multi="true">
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>Angular Fundamentals</mat-panel-title>
+        <mat-panel-description>Total Duration: 3 Hours</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the panel content. Add Course details</p>
+    <mat-action-row>
+        <button mat-button>Enroll</button>
+    </mat-action-row>
+</mat-expansion-panel>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-title>Angular Material</mat-panel-title>
+        <mat-panel-description>Total Duration: 2 Hours</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This is the panel content. Add Course details</p>
+    <mat-action-row>
+        <button mat-button>Enroll</button>
+    </mat-action-row>
+</mat-expansion-panel>
+</mat-accordion>
+<hr>
+<div class="mat-title" style="text-align: center;">Cards</div>
+<mat-card>
+    <mat-card-title>
+    Card Title
+</mat-card-title>
+<mat-card-content>
+    This is the Card Content
+</mat-card-content>
+<mat-card-actions align="end">
+    <button mat-flat-button>Login</button>
+</mat-card-actions>
+</mat-card>
