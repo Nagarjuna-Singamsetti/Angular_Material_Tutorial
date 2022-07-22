@@ -188,3 +188,25 @@
     <button mat-flat-button>Login</button>
 </mat-card-actions>
 </mat-card>
+<hr>
+<div class="mat-title" style="text-align: center;">Tabs</div>
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="Angular">Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+</mat-tab-group>
+{{tabRef.selectedIndex}}
+<hr>
+
+<div class="mat-title" style="text-align: center;">Stepper</div>
+<mat-vertical-stepper linear>
+    <mat-step label="Shipping Address" completed="false"><p>Shipping Address Details</p></mat-step>
+    <mat-step label="Billing Address" completed="false"><p>Billing Address Details</p>
+    <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false"><p>Place Order Details</p></mat-step>
+</mat-vertical-stepper>
+<hr>
