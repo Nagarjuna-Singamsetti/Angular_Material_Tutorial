@@ -1,30 +1,75 @@
 <hr>
 <div class="mat-title" style="text-align: center;">Buttons</div>
 <button mat-flat-button>Basic</button>
-    <button mat-flat-button color="primary">Primary</button>
-    <button mat-flat-button color="accent">Accent</button>
-    <button mat-flat-button color="warn">Warn</button>
-    <button mat-flat-button disabled>Disabled</button>
- 
+<button mat-flat-button color="primary">Primary</button>
+<button mat-flat-button color="accent">Accent</button>
+<button mat-flat-button color="warn">Warn</button>
+<button mat-flat-button disabled>Disabled</button>
+
 <hr>
 <div class="mat-title" style="text-align: center;">Toggle</div>
+<div>
+    <mat-button-toggle #toggleBtn checked disableRipple>Toggle</mat-button-toggle>
+    {{toggleBtn.checked}}
+</div>
+<div class="mat-title" style="text-align: center;">ToggleGroup</div>
+<div>
+    <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="angular">Angular</mat-button-toggle>
+        <mat-button-toggle value="react">React</mat-button-toggle>
+        <mat-button-toggle value="vue">Vue</mat-button-toggle>
+    </mat-button-toggle-group>
+    {{toggleGroup.value}}
+</div>
+<hr>
+<div class="mat-title" style="text-align: center;">Icons</div>
+<!-- https://material.io/tools/icons/?icon=grade&style=baseline use this site-->
+<div>
+    <mat-icon color="primary">thumb_up</mat-icon>
+    <mat-icon color="warn">build</mat-icon>
+</div>
+<hr>
+<div class="mat-title" style="text-align: center;">Badge</div>
+<span style="text-align: center;">
     <div>
-        <mat-button-toggle #toggleBtn checked disableRipple>Toggle</mat-button-toggle>
-        {{toggleBtn.checked}}
-    </div>
-    <div class="mat-title" style="text-align: center;">ToggleGroup</div>
+        <span matBadge="5">Alert</span>
+    </div><br>
     <div>
-        <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-            <mat-button-toggle value="angular">Angular</mat-button-toggle>
-            <mat-button-toggle value="react">React</mat-button-toggle>
-            <mat-button-toggle value="vue">Vue</mat-button-toggle>
-        </mat-button-toggle-group>
-        {{toggleGroup.value}}
-    </div>
-    <hr>
-    <div class="mat-title" style="text-align: center;">Icons</div>
+        <span matBadge="5" matBadgePosition="below before">Alert</span>
+    </div><br>
     <div>
-        <mat-icon color="primary">thumb_up</mat-icon>
-        <mat-icon color="warn">build</mat-icon>
+        <span matBadge="5" matBadgePosition="below after">Alert</span>
+    </div><br>
+    <div>
+        <span matBadge="5" matBadgePosition="above before">Alert</span>
+    </div><br>
+    <div>
+        <span matBadge="5" matBadgeSize="small">Alert</span>
+    </div><br>
+    <div>
+        <span matBadge="5" matBadgeSize="medium">Alert</span>
+    </div><br>
+    <div>
+        <span matBadge="5" matBadgeSize="large">Alert</span>
+    </div><br>
+    <div>
+        <span matBadge="5" matBadgeColor="primary">Alert</span>
     </div>
-    <hr>
+    <br>
+    <div>
+        <span matBadge="5" matBadgeColor="accent">Alert</span>
+    </div>
+    <br>
+    <div>
+        <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Alert</span>
+    </div><br>
+    <div>
+        <mat-icon color="warn">
+            <span class="material-icons" [matBadge]="alert" matBadgeColor="accent"  matBadgeSize="small" matBadgeOverlap="false">shopping_cart</span>
+        </mat-icon></div>
+    <br>
+    <div>
+        <span [matBadge]="alert" [matBadgeHidden]="alert===0">Alert</span>
+    </div><br>
+</span>
+<hr>
