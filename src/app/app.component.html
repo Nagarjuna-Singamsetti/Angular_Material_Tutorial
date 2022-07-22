@@ -96,3 +96,26 @@
         <button (click)="sidenav.toggle()">Toggle</button>
     </mat-sidenav-content>
 </mat-sidenav-container>
+<hr>
+<div class="mat-title" style="text-align: center;" >Menu</div>
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+    <button mat-menu-item>BackEnd</button>
+</mat-menu>
+<button mat-flat-button [matMenuTriggerFor]="appMenu" color="primary">Menu</button>
+
+<mat-menu #subMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+</mat-menu>
+<mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-age="age">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Age is {{age}}</button>
+        <button mat-menu-item>Log Out {{name}}</button>
+    </ng-template>  
+</mat-menu>
+<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'Nagarjuna', age:'30'}" [matMenuTriggerFor]="lazyMenu">Nagarjuna</button>
+<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'CodeEvolution', age:'Unknown'}" [matMenuTriggerFor]="lazyMenu">CodeEvolution</button>
+<hr>
