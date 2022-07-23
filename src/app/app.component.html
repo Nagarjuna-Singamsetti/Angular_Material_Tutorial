@@ -1,4 +1,8 @@
+<!-- <div class="content">
+    <span>{{title}}</span>
+</div> -->
 <hr>
+
 <div class="mat-title" style="text-align: center;">Buttons</div>
 <button mat-flat-button>Basic</button>
 <button mat-flat-button color="primary">Primary</button>
@@ -251,3 +255,14 @@
 </mat-form-field>
 {{selectedValue}}
 <hr>
+<div class="mat-title" style="text-align: center;">AutoComplete</div>
+<form>
+    <mat-form-field>
+        <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl"/>
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of filterdOptions |async" [value]="option">
+            {{option}}
+        </mat-option>
+    </mat-autocomplete>
+    </mat-form-field>
+</form>
