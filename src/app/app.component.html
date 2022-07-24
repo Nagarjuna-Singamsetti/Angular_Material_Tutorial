@@ -288,3 +288,12 @@
     <!-- <mat-datepicker #myDatePicker startView="multi-year" ></mat-datepicker> -->
     <mat-datepicker #myDatePicker ></mat-datepicker>
 </mat-form-field>
+<hr>
+<div class="mat-title" style="text-align: center;">ToolTip</div>
+<button mat-raised-button matTooltip="Welcome to CodeEvolution" 
+matTooltip="after" matTooltipShowDelay="1000" matTooltipHideDelay="1000">Hello </button>
+<hr>
+<div class="mat-title" style="text-align: center;">Snackbar</div>
+<button mat-button (click)="openSnackBar('Item Deleted','Dismiss')">
+   Show Snack-Bar 
+</button>
