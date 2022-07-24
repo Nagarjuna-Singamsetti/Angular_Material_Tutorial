@@ -82,7 +82,7 @@
 <div class="mat-title" style="text-align: center;">ToolBar</div>
 <mat-toolbar color="primary" class="navbar">
     <div>CodeEvolution</div>
-    <div >
+    <div>
         <span class="navbaritems">Home</span>
         <span class="navbaritems">About</span>
         <span class="navbaritems">Services</span>
@@ -91,7 +91,8 @@
 <hr>
 <div class="mat-title" style="text-align: center;">ToolBar</div>
 <mat-sidenav-container>
-    <mat-sidenav #sidenav (opened)="log('opened')" (closed)="log('closed')" mode="side" [(opened)]="opened">SideNav</mat-sidenav>
+    <mat-sidenav #sidenav (opened)="log('opened')" (closed)="log('closed')" mode="side" [(opened)]="opened">SideNav
+    </mat-sidenav>
     <!-- mode=side,push,over -->
     <mat-sidenav-content>Main
         <button (click)="opened=!opened">Toogle Open</button>
@@ -101,7 +102,7 @@
     </mat-sidenav-content>
 </mat-sidenav-container>
 <hr>
-<div class="mat-title" style="text-align: center;" >Menu</div>
+<div class="mat-title" style="text-align: center;">Menu</div>
 <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
     <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
     <button mat-menu-item>BackEnd</button>
@@ -118,12 +119,14 @@
         <button mat-menu-item>Settings</button>
         <button mat-menu-item>Age is {{age}}</button>
         <button mat-menu-item>Log Out {{name}}</button>
-    </ng-template>  
+    </ng-template>
 </mat-menu>
-<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'Nagarjuna', age:'30'}" [matMenuTriggerFor]="lazyMenu">Nagarjuna</button>
-<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'CodeEvolution', age:'Unknown'}" [matMenuTriggerFor]="lazyMenu">CodeEvolution</button>
+<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'Nagarjuna', age:'30'}"
+    [matMenuTriggerFor]="lazyMenu">Nagarjuna</button>
+<button mat-flat-button color="warn" [matMenuTriggerData]="{name:'CodeEvolution', age:'Unknown'}"
+    [matMenuTriggerFor]="lazyMenu">CodeEvolution</button>
 <hr>
-<div class="mat-title" style="text-align: center;" >List & Divider</div>
+<div class="mat-title" style="text-align: center;">List & Divider</div>
 <!-- <mat-list dense>
     <mat-list-item>Item 1</mat-list-item>
     <mat-list-item>Item 1</mat-list-item>
@@ -158,39 +161,39 @@
 <hr>
 <div class="mat-title" style="text-align: center;">Expansion Panel</div>
 <mat-accordion multi="true">
-<mat-expansion-panel>
-    <mat-expansion-panel-header>
-        <mat-panel-title>Angular Fundamentals</mat-panel-title>
-        <mat-panel-description>Total Duration: 3 Hours</mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>This is the panel content. Add Course details</p>
-    <mat-action-row>
-        <button mat-button>Enroll</button>
-    </mat-action-row>
-</mat-expansion-panel>
-<mat-expansion-panel>
-    <mat-expansion-panel-header>
-        <mat-panel-title>Angular Material</mat-panel-title>
-        <mat-panel-description>Total Duration: 2 Hours</mat-panel-description>
-    </mat-expansion-panel-header>
-    <p>This is the panel content. Add Course details</p>
-    <mat-action-row>
-        <button mat-button>Enroll</button>
-    </mat-action-row>
-</mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Angular Fundamentals</mat-panel-title>
+            <mat-panel-description>Total Duration: 3 Hours</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add Course details</p>
+        <mat-action-row>
+            <button mat-button>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Angular Material</mat-panel-title>
+            <mat-panel-description>Total Duration: 2 Hours</mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add Course details</p>
+        <mat-action-row>
+            <button mat-button>Enroll</button>
+        </mat-action-row>
+    </mat-expansion-panel>
 </mat-accordion>
 <hr>
 <div class="mat-title" style="text-align: center;">Cards</div>
 <mat-card>
     <mat-card-title>
-    Card Title
-</mat-card-title>
-<mat-card-content>
-    This is the Card Content
-</mat-card-content>
-<mat-card-actions align="end">
-    <button mat-flat-button>Login</button>
-</mat-card-actions>
+        Card Title
+    </mat-card-title>
+    <mat-card-content>
+        This is the Card Content
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-flat-button>Login</button>
+    </mat-card-actions>
 </mat-card>
 <hr>
 <div class="mat-title" style="text-align: center;">Tabs</div>
@@ -204,14 +207,19 @@
 
 <div class="mat-title" style="text-align: center;">Stepper</div>
 <mat-vertical-stepper linear>
-    <mat-step label="Shipping Address" completed="false"><p>Shipping Address Details</p></mat-step>
-    <mat-step label="Billing Address" completed="false"><p>Billing Address Details</p>
-    <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-    </div>
+    <mat-step label="Shipping Address" completed="false">
+        <p>Shipping Address Details</p>
     </mat-step>
-    <mat-step label="Place Order" completed="false"><p>Place Order Details</p></mat-step>
+    <mat-step label="Billing Address" completed="false">
+        <p>Billing Address Details</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+        </div>
+    </mat-step>
+    <mat-step label="Place Order" completed="false">
+        <p>Place Order Details</p>
+    </mat-step>
 </mat-vertical-stepper>
 <hr>
 
@@ -243,14 +251,14 @@
     <mat-select [(value)]="selectedValue" multiple>
         <mat-option>None</mat-option>
         <mat-optgroup label="Web">
-        <mat-option value="Angular">Angular</mat-option>
-        <mat-option value="React">React</mat-option>
-        <mat-option value="Vue">Vue</mat-option>
-    </mat-optgroup>
-    <mat-optgroup label="Mobile">
-        <mat-option value="ionic">Ionic</mat-option>
-        <mat-option value="Reactnative">Reactnative</mat-option>
-    </mat-optgroup>
+            <mat-option value="Angular">Angular</mat-option>
+            <mat-option value="React">React</mat-option>
+            <mat-option value="Vue">Vue</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="Mobile">
+            <mat-option value="ionic">Ionic</mat-option>
+            <mat-option value="Reactnative">Reactnative</mat-option>
+        </mat-optgroup>
     </mat-select>
 </mat-form-field>
 {{selectedValue}}
@@ -258,12 +266,12 @@
 <div class="mat-title" style="text-align: center;">AutoComplete</div>
 <form>
     <mat-form-field>
-        <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl"/>
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-        <mat-option *ngFor="let option of filterdOptions |async" [value]="option">
-            {{option}}
-        </mat-option>
-    </mat-autocomplete>
+        <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl" />
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let option of filterdOptions |async" [value]="option">
+                {{option}}
+            </mat-option>
+        </mat-autocomplete>
     </mat-form-field>
 </form>
 <hr>
@@ -286,14 +294,16 @@
     <!-- <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter"> -->
     <mat-datepicker-toggle [for]="myDatePicker" matSuffix></mat-datepicker-toggle>
     <!-- <mat-datepicker #myDatePicker startView="multi-year" ></mat-datepicker> -->
-    <mat-datepicker #myDatePicker ></mat-datepicker>
+    <mat-datepicker #myDatePicker></mat-datepicker>
 </mat-form-field>
 <hr>
 <div class="mat-title" style="text-align: center;">ToolTip</div>
-<button mat-raised-button matTooltip="Welcome to CodeEvolution" 
-matTooltip="after" matTooltipShowDelay="1000" matTooltipHideDelay="1000">Hello </button>
+<button mat-raised-button matTooltip="Welcome to CodeEvolution" matTooltip="after" matTooltipShowDelay="1000"
+    matTooltipHideDelay="1000">Hello </button>
 <hr>
 <div class="mat-title" style="text-align: center;">Snackbar</div>
 <button mat-button (click)="openSnackBar('Item Deleted','Dismiss')">
-   Show Snack-Bar 
+    Show Snack-Bar
 </button>
+<hr>
+<app-table></app-table>

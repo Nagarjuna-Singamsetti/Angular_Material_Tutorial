@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TableComponent } from './component/table/table.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
