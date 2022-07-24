@@ -44,5 +44,14 @@ private _filter(value:string):string[]{
   const filterValue =value.toLowerCase()
   return this.options.filter(option=>option.toLowerCase().includes(filterValue));
 }
+//date
+minDate=new Date();
+maxDate=new Date(2022, 11, 31 );
+
+
+// dateFilter = date => {
+//   const day =date.getDay();
+//   return day !=0 && day !=6;
+// }
   
 }
