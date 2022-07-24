@@ -1,0 +1,11 @@
+.numbers{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid coral;
+    box-sizing: border-box;
+    height: 100px;
+}
+.container{
+    height:400px;
+}
